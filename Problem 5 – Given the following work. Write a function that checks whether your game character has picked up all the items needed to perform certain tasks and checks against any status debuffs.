@@ -1,0 +1,39 @@
+#Daniel L
+#8/26/23
+#Write a function that checks whether your game character has picked up all the items needed to perform certain tasks and checks against any status debuffs. Confirm checks with print statement
+class Character:
+    def __init__(self, nickname, weapons, weaknesses):
+        self.nickname = nickname
+        self.weapons = weapons
+        self.weaknesses = weaknesses
+
+def perform_tasks(character):
+    tasks = {
+        "Climb a mountain": {
+            "required_items": ["rope", "coat", "first aid kit"],
+            "required_weaknesses": ["slow"]
+        },
+        "Cook a meal": {
+            "required_items": ["pan", "groceries"],
+            "required_weaknesses": ["small"]
+        },
+        "Write a book": {
+            "required_items": ["pen", "paper", "idea"],
+            "required_weaknesses": ["confusion"]
+        }
+    }
+
+    for task, requirements in tasks.items():
+        missing_items = [item for item in requirements["required_items"] if item not in character.weapons]
+        missing_weaknesses = [debuff for debuff in requirements["required_weaknesses"] if debuff in character.weaknesses]
+
+        if not missing_items and not missing_weaknesses:
+            print(f"{character.nickname} can perform '{task}'.")
+        else:
+            print(f"{character.nickname} cannot perform '{task}'.")
+
+# Creating a character
+player1 = Character('Dragon Slayer', ['pan', 'paper', 'idea', 'rope', 'groceries'], ['slow'])
+
+# Checking tasks
+perform_tasks(player1)
