@@ -1,0 +1,11 @@
+#Daniel L
+#8/26/23
+#Write a function that takes a list and prints if the value 5 is in that list
+def check_value_in_list(value, my_list):
+    if value in my_list:
+        print(f"The value {value} is in the list.")
+    else:
+        print(f"The value {value} is not in the list.")
+
+my_list = [int(x) for x in input("Enter a list of numbers separated by spaces: ").split()]
+check_value_in_list(5, my_list)
