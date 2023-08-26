@@ -1,6 +1,7 @@
 # Module-8-Lab-Activity-Booleans-Deliverables
 Test your program
-Fix any bugs (try out the debugging technique
+Fix any bugs (try out the debugging technique.
+
 Problem 1 – Write a function that takes two inputs from a user and prints whether they are equal or not.
 
 Problem 2 – Write a function that takes two inputs from a user and prints whether the sum is greater than 10, less than 10, or equal to 10.
