@@ -1,0 +1,13 @@
+Problem 1 – Write a function that takes two inputs from a user and prints whether they are equal or not.
+#Daniel L
+#8/26/23
+#Program Write a function that takes two inputs from a user and prints whether they are equal or not
+def compare_equal(num1, num2):
+    if num1 == num2:
+        print("The numbers are equal.")
+    else:
+        print("The numbers are not equal.")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+compare_equal(num1, num2)
